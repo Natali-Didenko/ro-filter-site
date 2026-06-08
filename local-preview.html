@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RO filter Local Preview</title>
+    <link rel="stylesheet" href="./app/globals.css" />
+  </head>
+  <body>
+    <main>
+      <header class="siteHeader" id="top">
+        <div class="topBar">
+          <span>+38 (067) 123-99-11</span>
+          <span>Щоденно з 10 до 19</span>
+          <div class="messengers" aria-label="Месенджери">
+            <a href="#order">Telegram</a>
+            <a href="#order">Viber</a>
+            <a href="#order">WhatsApp</a>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Головна навігація">
+          <a class="brand" href="#top">RO filter</a>
+          <div class="navLinks">
+            <a href="#catalog">Каталог</a>
+            <a href="#services">Послуги</a>
+            <a href="#delivery">Доставка</a>
+            <a href="#contacts">Контакти</a>
+          </div>
+          <a class="navButton" href="#order">Замовити дзвінок</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="heroGrid">
+          <div class="heroCopy">
+            <p class="eyebrow">Фільтри для води з монтажем</p>
+            <h1>Підберемо фільтр, встановимо і замінимо картриджі</h1>
+            <p class="lead">
+              Оберіть фільтр, комплект картриджів або сервіс, а ми уточнимо
+              деталі телефоном і підкажемо найзручніше рішення.
+            </p>
+            <div class="heroActions">
+              <a class="button primary" href="#catalog">Перейти до товарів</a>
+              <a class="button secondary" href="#order">Залишити заявку</a>
+            </div>
+          </div>
+
+          <div class="heroPanel" aria-label="Приклад системи очищення">
+            <div class="heroCard">
+              <span class="heroStatus">Питна вода</span>
+              <div class="productVisual osmosis"></div>
+              <strong>Осмос + монтаж</strong>
+              <p>Популярне рішення для кухні</p>
+            </div>
+            <div class="heroMetric">
+              <strong>24 год</strong>
+              <span>і ви п'єте чисту воду</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="catalog">
+        <div class="sectionHeader rowHeader">
+          <div>
+            <p class="eyebrow">Категорії</p>
+            <h2>Основні напрямки</h2>
+          </div>
+          <a class="textLink" href="#order">Не знаєте що обрати?</a>
+        </div>
+        <div class="categoryGrid">
+          <article class="categoryCard">
+            <div class="categoryMark"></div>
+            <h3>Сервіс і монтаж</h3>
+            <p>Встановлення, заміна картриджів і перевірка систем.</p>
+          </article>
+          <article class="categoryCard">
+            <div class="categoryMark"></div>
+            <h3>Фільтри для питної води</h3>
+            <p>Осмоси та проточні системи під мийку для квартири.</p>
+          </article>
+          <article class="categoryCard">
+            <div class="categoryMark"></div>
+            <h3>Змінні картриджі</h3>
+            <p>Комплекти для осмосу, механічні та вугільні картриджі.</p>
+          </article>
+          <article class="categoryCard">
+            <div class="categoryMark"></div>
+            <h3>Магістральні фільтри</h3>
+            <p>Колби та рішення для очищення води на вході в будинок.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section productsSection" id="products">
+        <div class="sectionHeader">
+          <p class="eyebrow">Рішення та послуги</p>
+          <h2>Популярні позиції</h2>
+        </div>
+        <div class="productGrid">
+          <article class="productCard">
+            <div class="productBadge">Монтаж</div>
+            <div class="productVisual install"></div>
+            <div class="productBody">
+              <span class="stock">Виїзд майстра</span>
+              <h3>Монтаж осмосу</h3>
+              <p>Акуратне встановлення системи з підключенням крана та перевіркою.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <strong>від 1 200 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Монтаж осмосу"
+                data-options="Стандартний монтаж осмосу під мийкою|Виведення окремого крана для фільтрованої води|Підключення до основного змішувача 3-в-1|Демонтаж старої системи перед встановленням"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+          <article class="productCard">
+            <div class="productBadge">-15%</div>
+            <div class="productVisual osmosis"></div>
+            <div class="productBody">
+              <span class="stock">В наявності</span>
+              <h3>Фільтр зворотного осмосу 5 ступенів</h3>
+              <p>Для сім'ї, яка хоче стабільно чисту питну воду щодня.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <span>9 200 грн</span>
+                <strong>від 7 800 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Фільтр зворотного осмосу 5 ступенів"
+                data-options="Осмос 5 ступенів|Осмос 6 ступенів з мінералізатором|Осмос з помпою для низького тиску|Осмос із баком збільшеного об'єму"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+          <article class="productCard">
+            <div class="productBadge">Хіт</div>
+            <div class="productVisual inline"></div>
+            <div class="productBody">
+              <span class="stock">В наявності</span>
+              <h3>Проточний фільтр під мийку</h3>
+              <p>Компактне рішення без накопичувального бака.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <strong>від 3 900 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Проточний фільтр під мийку"
+                data-options="Встановлення і виведення окремого крана для фільтру|Встановлення і під'єднання до основного змішувача|Підбір картриджів під якість води|Підключення фільтра без заміни змішувача"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+          <article class="productCard">
+            <div class="productBadge">Сервіс</div>
+            <div class="productVisual cartridge"></div>
+            <div class="productBody">
+              <span class="stock">В наявності</span>
+              <h3>Річний комплект картриджів</h3>
+              <p>Планова заміна для осмосу або проточної системи.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <strong>від 1 350 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Річний комплект картриджів"
+                data-options="Комплект картриджів для осмосу 5 ступенів|Комплект картриджів з мінералізатором|Комплект для проточного фільтра під мийку|Мембрана для зворотного осмосу"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+          <article class="productCard">
+            <div class="productBadge">Будинок</div>
+            <div class="productVisual mainline"></div>
+            <div class="productBody">
+              <span class="stock">Під замовлення</span>
+              <h3>Магістральна колба з картриджем</h3>
+              <p>Попереднє очищення води для квартири чи приватного будинку.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <strong>від 2 300 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Магістральна колба з картриджем"
+                data-options="Механічний картридж від піску та іржі|Вугільний картридж від запаху та хлору|Картридж пом'якшення води|Комплект для магістральної колби"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="offersBand">
+        <div class="sectionHeader">
+          <p class="eyebrow">Акційні пропозиції</p>
+          <h2>Вигідні комплекти для старту</h2>
+        </div>
+        <div class="offersGrid">
+          <article class="offerCard">
+            <h3>Картриджі в подарунок</h3>
+            <p>При купівлі системи зворотного осмосу даруємо комплект картриджів для першої планової заміни.</p>
+          </article>
+          <article class="offerCard">
+            <h3>Монтаж зі знижкою</h3>
+            <p>При замовленні фільтра разом із встановленням майстер зробить монтаж за спеціальною ціною.</p>
+          </article>
+          <article class="offerCard">
+            <h3>Консультація безкоштовно</h3>
+            <p>Підкажемо, який фільтр обрати для квартири чи будинку, ще до оформлення замовлення.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="serviceBand" id="services">
+        <div>
+          <p class="eyebrow">Послуги</p>
+          <h2>Монтаж і заміна без зайвої складності</h2>
+          <p>
+            Не робимо великий каталог сервісів: достатньо заявки, після якої
+            майстер уточнить модель фільтра, картриджі та зручний час.
+          </p>
+        </div>
+        <ul class="serviceList">
+          <li>Підбір системи під воду, місце монтажу та бюджет</li>
+          <li>Заміна картриджів і мембран з перевіркою герметичності</li>
+          <li>Діагностика слабкого тиску, запаху або осаду у воді</li>
+        </ul>
+      </section>
+
+      <section class="section" id="delivery">
+        <div class="sectionHeader">
+          <p class="eyebrow">Інформація</p>
+          <h2>Що варто знати перед замовленням</h2>
+        </div>
+        <div class="infoGrid">
+          <article class="infoItem">
+            <h3>Доставка</h3>
+            <p>Відправляємо Новою поштою або доставляємо майстром разом із монтажем у зручний час.</p>
+          </article>
+          <article class="infoItem">
+            <h3>Оплата</h3>
+            <p>Оплата на картку, готівкою після встановлення або за рахунком для компаній.</p>
+          </article>
+          <article class="infoItem">
+            <h3>Гарантія</h3>
+            <p>Даємо гарантію на обладнання та роботу, а також підкажемо графік наступної заміни.</p>
+          </article>
+          <article class="infoItem">
+            <h3>Контакти</h3>
+            <p>Залиште заявку або напишіть у месенджер. Менеджер уточнить модель, адресу та час.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reviewsBand">
+        <div class="sectionHeader">
+          <p class="eyebrow">Відгуки</p>
+          <h2>Що важливо клієнтам</h2>
+        </div>
+        <div class="reviewsGrid">
+          <article class="reviewCard">
+            <p>Поставили осмос під мийку, все акуратно. Вода на смак стала набагато кращою.</p>
+            <strong>Влад</strong>
+          </article>
+          <article class="reviewCard">
+            <p>Допомогли підібрати картриджі і швидко замінили. Сподобалося, що пояснили простими словами.</p>
+            <strong>Вікторія</strong>
+          </article>
+          <article class="reviewCard">
+            <p>Замовляв фільтр для будинку. Майстер перевірив тиск і порадив правильну комплектацію.</p>
+            <strong>Роман</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="orderSection" id="order">
+        <div class="orderIntro" id="contacts">
+          <p class="eyebrow">Швидке замовлення</p>
+          <h2>Залиште контакти, і ми уточнимо деталі</h2>
+          <p>
+            Напишіть, що потрібно: купити фільтр, замінити картриджі або
+            встановити систему. Заявка піде на email та в Telegram у Next-версії.
+          </p>
+          <div class="contactBox">
+            <strong>+38 (067) 123-99-11</strong>
+            <span>Telegram / Viber / WhatsApp</span>
+          </div>
+        </div>
+        <form class="orderForm">
+          <label>Ім'я<input placeholder="Олена" /></label>
+          <label>Телефон<input placeholder="+380..." /></label>
+          <label>
+            Що вас цікавить?
+            <select>
+              <option>Купити фільтр</option>
+              <option>Заміна картриджів</option>
+              <option>Встановлення фільтра</option>
+              <option>Консультація</option>
+            </select>
+          </label>
+          <label class="full">
+            Коментар
+            <textarea rows="5" placeholder="Напишіть, яка послуга вас цікавить, район, зручний час або інші деталі"></textarea>
+          </label>
+          <button class="submitButton" type="button">Замовити</button>
+        </form>
+      </section>
+
+      <div class="modalOverlay" hidden id="previewModal">
+        <div class="orderModal" role="dialog" aria-modal="true" aria-labelledby="previewModalTitle">
+          <button class="modalClose" id="previewModalClose" type="button" aria-label="Закрити">×</button>
+          <p class="eyebrow">Замовлення</p>
+          <h2 id="previewModalTitle">Замовлення</h2>
+          <p class="modalLead">Оберіть потрібні позиції, залиште телефон, і ми уточнимо деталі.</p>
+          <form class="modalForm">
+            <fieldset class="optionGroup">
+              <legend>Що вас цікавить?</legend>
+              <div id="previewModalOptions"></div>
+            </fieldset>
+            <label>Ім'я<input placeholder="Олена" /></label>
+            <label>Телефон<input placeholder="+380..." /></label>
+            <label class="full">
+              Коментар
+              <textarea rows="4" placeholder="Напишіть, яка послуга вас цікавить, район, зручний час або інші деталі"></textarea>
+            </label>
+            <button class="submitButton" type="button">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      const modal = document.getElementById("previewModal");
+      const title = document.getElementById("previewModalTitle");
+      const optionsRoot = document.getElementById("previewModalOptions");
+      const closeButton = document.getElementById("previewModalClose");
+
+      document.querySelectorAll(".previewOrderButton").forEach((button) => {
+        button.addEventListener("click", () => {
+          title.textContent = button.dataset.item || "Замовлення";
+          optionsRoot.innerHTML = "";
+
+          (button.dataset.options || "")
+            .split("|")
+            .filter(Boolean)
+            .forEach((option) => {
+              const label = document.createElement("label");
+              label.className = "checkboxOption";
+              label.innerHTML = `<input type="checkbox" /><span>${option}</span>`;
+              optionsRoot.appendChild(label);
+            });
+
+          modal.hidden = false;
+        });
+      });
+
+      function closeModal() {
+        modal.hidden = true;
+      }
+
+      closeButton.addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+    </script>
+  </body>
+</html>
