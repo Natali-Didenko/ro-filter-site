@@ -66,13 +66,48 @@ main {
 
 .messengers {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
-.messengers a,
 .textLink {
   color: var(--primary-dark);
   font-weight: 800;
+}
+
+.messengers a {
+  align-items: center;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+  width: 34px;
+}
+
+.messengers a:hover {
+  opacity: 0.82;
+  transform: translateY(-1px);
+}
+
+.messengers svg {
+  display: block;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+}
+
+.telegramIcon {
+  color: #229ed9;
+}
+
+.viberIcon {
+  color: #7360f2;
+}
+
+.whatsappIcon {
+  color: #25d366;
 }
 
 .nav {
