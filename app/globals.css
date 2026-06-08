@@ -76,6 +76,8 @@ main {
 
 .messengers a {
   align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
   border-radius: 50%;
   display: inline-flex;
   height: 34px;
@@ -745,6 +747,10 @@ h3 {
 .contactBox span {
   color: var(--muted);
   font-weight: 800;
+}
+
+.contactMessengers {
+  justify-content: flex-start;
 }
 
 .orderForm {
