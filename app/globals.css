@@ -122,9 +122,49 @@ main {
 }
 
 .brand {
+  align-items: center;
   color: var(--primary-dark);
-  font-size: 23px;
+  display: inline-flex;
   font-weight: 900;
+  gap: 10px;
+}
+
+.brandMark {
+  align-items: center;
+  background: #e8f7fb;
+  border: 1px solid rgba(19, 158, 192, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(11, 92, 116, 0.12);
+  color: var(--primary);
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.brandMark svg {
+  display: block;
+  height: 34px;
+  width: 34px;
+}
+
+.brandText {
+  display: grid;
+  gap: 1px;
+  line-height: 1;
+}
+
+.brandText span:first-child {
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.brandText span:last-child {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .navLinks {
@@ -322,6 +362,28 @@ h3 {
 
 .heroCard .productVisual {
   height: 250px;
+}
+
+.productPhotoFrame {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(11, 135, 147, 0.08), rgba(11, 135, 147, 0)),
+    #f8fbfb;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  height: 190px;
+  justify-content: center;
+  margin: 18px 0;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.productPhotoFrame img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .productVisual::before,

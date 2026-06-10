@@ -29,6 +29,8 @@ const products: Product[] = [
     badge: "Монтаж",
     description:
       "Акуратне встановлення системи з підключенням крана та перевіркою.",
+    image: "/product-images/install.png",
+    imageAlt: "Монтаж фільтра зворотного осмосу під мийкою",
     type: "install",
     requestType: "installation",
     options: [
@@ -45,6 +47,8 @@ const products: Product[] = [
     status: "В наявності",
     badge: "-15%",
     description: "Для сім'ї, яка хоче стабільно чисту питну воду щодня.",
+    image: "/product-images/osmosis.png",
+    imageAlt: "Система зворотного осмосу з баком і краном",
     type: "osmosis",
     requestType: "filter",
     options: [
@@ -60,6 +64,8 @@ const products: Product[] = [
     status: "В наявності",
     badge: "Хіт",
     description: "Компактне рішення без накопичувального бака.",
+    image: "/product-images/inline.png",
+    imageAlt: "Проточний фільтр під мийку з підключенням до води",
     type: "inline",
     requestType: "filter",
     options: [
@@ -75,6 +81,8 @@ const products: Product[] = [
     status: "В наявності",
     badge: "Сервіс",
     description: "Планова заміна для осмосу або проточної системи.",
+    image: "/product-images/cartridges.png",
+    imageAlt: "Комплект змінних картриджів для фільтра води",
     type: "cartridge",
     requestType: "cartridges",
     options: [
@@ -90,6 +98,8 @@ const products: Product[] = [
     status: "Під замовлення",
     badge: "Будинок",
     description: "Попереднє очищення води для квартири чи приватного будинку.",
+    image: "/product-images/mainline.png",
+    imageAlt: "Магістральна колба з картриджем для очищення води",
     type: "mainline",
     requestType: "filter",
     options: [
@@ -202,7 +212,33 @@ export default function Home() {
 
         <nav className="nav" aria-label="Головна навігація">
           <a className="brand" href="#top">
-            RO filter
+            <span className="brandMark" aria-hidden="true">
+              <svg viewBox="0 0 44 44" role="img">
+                <path
+                  d="M22 4c6.9 7.8 12.8 15.2 12.8 23.4 0 7.4-5.4 12.6-12.8 12.6S9.2 34.8 9.2 27.4C9.2 19.2 15.1 11.8 22 4Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M15.2 28.1c0 4.5 3.2 7.9 7.6 7.9 2.3 0 4.4-.9 5.7-2.6-1.1.5-2.4.8-3.8.8-5.2 0-8.7-3.5-8.7-8.4 0-2.1.6-4.3 1.7-6.5-1.6 2.7-2.5 5.5-2.5 8.8Z"
+                  fill="#ffffff"
+                  opacity=".36"
+                />
+                <text
+                  x="22"
+                  y="28"
+                  fill="#ffffff"
+                  fontSize="10"
+                  fontWeight="800"
+                  textAnchor="middle"
+                >
+                  RO
+                </text>
+              </svg>
+            </span>
+            <span className="brandText">
+              <span>RO</span>
+              <span>filter</span>
+            </span>
           </a>
           <div className="navLinks">
             <a href="#catalog">Каталог</a>

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RO filter Local Preview</title>
+    <link rel="icon" href="./app/icon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./app/globals.css" />
   </head>
   <body>
@@ -32,7 +33,35 @@
         </div>
 
         <nav class="nav" aria-label="Головна навігація">
-          <a class="brand" href="#top">RO filter</a>
+          <a class="brand" href="#top">
+            <span class="brandMark" aria-hidden="true">
+              <svg viewBox="0 0 44 44" role="img">
+                <path
+                  d="M22 4c6.9 7.8 12.8 15.2 12.8 23.4 0 7.4-5.4 12.6-12.8 12.6S9.2 34.8 9.2 27.4C9.2 19.2 15.1 11.8 22 4Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M15.2 28.1c0 4.5 3.2 7.9 7.6 7.9 2.3 0 4.4-.9 5.7-2.6-1.1.5-2.4.8-3.8.8-5.2 0-8.7-3.5-8.7-8.4 0-2.1.6-4.3 1.7-6.5-1.6 2.7-2.5 5.5-2.5 8.8Z"
+                  fill="#ffffff"
+                  opacity=".36"
+                />
+                <text
+                  x="22"
+                  y="28"
+                  fill="#ffffff"
+                  font-size="10"
+                  font-weight="800"
+                  text-anchor="middle"
+                >
+                  RO
+                </text>
+              </svg>
+            </span>
+            <span class="brandText">
+              <span>RO</span>
+              <span>filter</span>
+            </span>
+          </a>
           <div class="navLinks">
             <a href="#catalog">Каталог</a>
             <a href="#services">Послуги</a>
@@ -113,7 +142,9 @@
         <div class="productGrid">
           <article class="productCard">
             <div class="productBadge">Монтаж</div>
-            <div class="productVisual install"></div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/install.png" alt="Монтаж фільтра зворотного осмосу під мийкою" />
+            </div>
             <div class="productBody">
               <span class="stock">Виїзд майстра</span>
               <h3>Монтаж осмосу</h3>
@@ -135,7 +166,9 @@
           </article>
           <article class="productCard">
             <div class="productBadge">-15%</div>
-            <div class="productVisual osmosis"></div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/osmosis.png" alt="Система зворотного осмосу з баком і краном" />
+            </div>
             <div class="productBody">
               <span class="stock">В наявності</span>
               <h3>Фільтр зворотного осмосу 5 ступенів</h3>
@@ -158,7 +191,9 @@
           </article>
           <article class="productCard">
             <div class="productBadge">Хіт</div>
-            <div class="productVisual inline"></div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/inline.png" alt="Проточний фільтр під мийку з підключенням до води" />
+            </div>
             <div class="productBody">
               <span class="stock">В наявності</span>
               <h3>Проточний фільтр під мийку</h3>
@@ -180,7 +215,9 @@
           </article>
           <article class="productCard">
             <div class="productBadge">Сервіс</div>
-            <div class="productVisual cartridge"></div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/cartridges.png" alt="Комплект змінних картриджів для фільтра води" />
+            </div>
             <div class="productBody">
               <span class="stock">В наявності</span>
               <h3>Річний комплект картриджів</h3>
@@ -202,7 +239,9 @@
           </article>
           <article class="productCard">
             <div class="productBadge">Будинок</div>
-            <div class="productVisual mainline"></div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/mainline.png" alt="Магістральна колба з картриджем для очищення води" />
+            </div>
             <div class="productBody">
               <span class="stock">Під замовлення</span>
               <h3>Магістральна колба з картриджем</h3>

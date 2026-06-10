@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FormEvent, useState } from "react";
 
 export type ProductOption = {
@@ -13,6 +14,8 @@ export type Product = {
   status: string;
   badge: string;
   description: string;
+  image: string;
+  imageAlt: string;
   type: string;
   requestType: string;
   options: ProductOption[];
@@ -81,7 +84,15 @@ export default function ProductOrderCards({ products }: { products: Product[] })
         {products.map((product) => (
           <article className="productCard" key={product.name}>
             <div className="productBadge">{product.badge}</div>
-            <div className={`productVisual ${product.type}`} />
+            <div className="productPhotoFrame">
+              <Image
+                src={product.image}
+                alt={product.imageAlt}
+                width={480}
+                height={300}
+                priority={false}
+              />
+            </div>
             <div className="productBody">
               <span className="stock">{product.status}</span>
               <h3>{product.name}</h3>
