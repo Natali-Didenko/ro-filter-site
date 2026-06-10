@@ -364,6 +364,22 @@ h3 {
   height: 250px;
 }
 
+.heroProductImage {
+  background: #f8fbfb;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  height: 250px;
+  margin: 18px 0;
+  overflow: hidden;
+}
+
+.heroProductImage img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .productPhotoFrame {
   align-items: center;
   background:
@@ -479,14 +495,20 @@ h3 {
 }
 
 .rowHeader {
-  align-items: end;
+  align-items: flex-start;
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .sectionHeader {
   max-width: 720px;
+}
+
+.categoryHeaderText {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
 }
 
 .categoryGrid,
@@ -538,11 +560,27 @@ h3 {
 }
 
 .categoryMark {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  border-radius: 8px;
+  align-items: center;
+  background: #e8f7fb;
+  border: 1px solid rgba(19, 158, 192, 0.18);
+  border-radius: 14px;
+  color: var(--primary-dark);
+  display: inline-flex;
   height: 42px;
+  justify-content: center;
   margin-bottom: 18px;
   width: 42px;
+}
+
+.categoryMark svg {
+  display: block;
+  fill: none;
+  height: 27px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  width: 27px;
 }
 
 .categoryCard p,

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import OrderForm from "./components/OrderForm";
 import ProductOrderCards from "./components/ProductOrderCards";
 import type { Product } from "./components/ProductOrderCards";
@@ -6,18 +7,22 @@ const categories = [
   {
     title: "Сервіс і монтаж",
     description: "Встановлення, заміна картриджів і перевірка систем.",
+    icon: "service",
   },
   {
     title: "Фільтри для питної води",
     description: "Осмоси та проточні системи під мийку для квартири.",
+    icon: "drinking",
   },
   {
     title: "Змінні картриджі",
     description: "Комплекти для осмосу, механічні та вугільні картриджі.",
+    icon: "cartridges",
   },
   {
     title: "Магістральні фільтри",
     description: "Колби та рішення для очищення води на вході в будинок.",
+    icon: "mainline",
   },
 ];
 
@@ -139,11 +144,11 @@ const infoPages = [
   },
   {
     title: "Оплата",
-    text: "Оплата на картку, готівкою після встановлення або за рахунком для компаній.",
+    text: "Оплата карткою, готівкою або на рахунок компанії.",
   },
   {
     title: "Гарантія",
-    text: "Даємо гарантію на обладнання та роботу, а також підкажемо графік наступної заміни.",
+    text: "Даємо гарантію на обладнання та роботу, а якщо щось піде не так - швидко допоможемо.",
   },
   {
     title: "Контакти",
@@ -165,6 +170,46 @@ const reviews = [
     text: "Замовляв фільтр для будинку. Майстер перевірив тиск і порадив правильну комплектацію.",
   },
 ];
+
+function CategoryIcon({ type }: { type: string }) {
+  if (type === "service") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <path d="M29 8l11 11-7 7-4-4-13 13-6 2 2-6 13-13-3-3 7-7Z" />
+        <path d="M13 34l4 4" />
+      </svg>
+    );
+  }
+
+  if (type === "drinking") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <path d="M24 6c7 8 13 15 13 23a13 13 0 0 1-26 0c0-8 6-15 13-23Z" />
+        <path d="M18 31c1 4 4 6 8 6" />
+      </svg>
+    );
+  }
+
+  if (type === "cartridges") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <rect height="27" rx="5" width="8" x="10" y="13" />
+        <rect height="31" rx="5" width="8" x="20" y="9" />
+        <rect height="24" rx="5" width="8" x="30" y="16" />
+        <path d="M11 21h6M21 18h6M31 24h6" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden="true" viewBox="0 0 48 48">
+      <path d="M12 14h24" />
+      <path d="M18 14v-3h12v3" />
+      <rect height="27" rx="7" width="18" x="15" y="14" />
+      <path d="M20 24h8M20 30h8" />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
@@ -274,7 +319,15 @@ export default function Home() {
           <div className="heroPanel" aria-label="Приклад системи очищення">
             <div className="heroCard">
               <span className="heroStatus">Питна вода</span>
-              <div className="productVisual osmosis" />
+              <div className="heroProductImage">
+                <Image
+                  src="/product-images/hero-osmosis-install.png"
+                  alt="Система зворотного осмосу встановлена під кухонною мийкою"
+                  width={1100}
+                  height={760}
+                  priority
+                />
+              </div>
               <strong>Осмос + монтаж</strong>
               <p>Популярне рішення для кухні</p>
             </div>
@@ -288,18 +341,20 @@ export default function Home() {
 
       <section className="section" id="catalog">
         <div className="sectionHeader rowHeader">
-          <div>
+          <div className="categoryHeaderText">
             <p className="eyebrow">Категорії</p>
             <h2>Основні напрямки</h2>
+            <a className="textLink" href="#order">
+              Не знаєте що обрати?
+            </a>
           </div>
-          <a className="textLink" href="#order">
-            Не знаєте що обрати?
-          </a>
         </div>
         <div className="categoryGrid">
           {categories.map((category) => (
             <article className="categoryCard" key={category.title}>
-              <div className="categoryMark" />
+              <div className="categoryMark">
+                <CategoryIcon type={category.icon} />
+              </div>
               <h3>{category.title}</h3>
               <p>{category.description}</p>
             </article>
@@ -335,8 +390,8 @@ export default function Home() {
           <p className="eyebrow">Послуги</p>
           <h2>Монтаж і заміна без зайвої складності</h2>
           <p>
-            Не робимо великий каталог сервісів: достатньо заявки, після якої
-            майстер уточнить модель фільтра, картриджі та зручний час.
+            Якщо не знаєте модель фільтра або які картриджі потрібні, залиште
+            заявку - майстер уточнить деталі та підкаже найкраще рішення.
           </p>
         </div>
         <ul className="serviceList">
