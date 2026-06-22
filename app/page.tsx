@@ -11,7 +11,8 @@ const categories = [
   },
   {
     title: "Фільтри для питної води",
-    description: "Осмоси та проточні системи під мийку для квартири.",
+    description:
+      "Зворотні осмоси під мийку для дому та фільтри для кафе і ресторанів.",
     icon: "drinking",
   },
   {
@@ -64,7 +65,7 @@ const products: Product[] = [
     ],
   },
   {
-    name: "Проточний фільтр під мийку",
+    name: "Кухонні комбіновані змішувачі",
     price: "від 3 900 грн",
     status: "В наявності",
     badge: "Хіт",
@@ -81,7 +82,7 @@ const products: Product[] = [
     ],
   },
   {
-    name: "Річний комплект картриджів",
+    name: "Змінні картриджі",
     price: "від 1 350 грн",
     status: "В наявності",
     badge: "Сервіс",
@@ -98,7 +99,7 @@ const products: Product[] = [
     ],
   },
   {
-    name: "Магістральна колба з картриджем",
+    name: "Магістральні колби та картриджі",
     price: "від 2 300 грн",
     status: "Під замовлення",
     badge: "Будинок",
@@ -216,7 +217,7 @@ export default function Home() {
     <main>
       <header className="siteHeader" id="top">
         <div className="topBar">
-          <span>+38 (067) 123-99-11</span>
+          <span>0 (93) 414 99 12</span>
           <span>Щоденно з 10 до 19</span>
           <div className="messengers" aria-label="Месенджери">
             <a aria-label="Telegram" className="telegramIcon" href="#order">
@@ -440,7 +441,7 @@ export default function Home() {
             встановити систему. Заявка піде на email та в Telegram.
           </p>
           <div className="contactBox">
-            <strong>+38 (067) 123-99-11</strong>
+            <strong>0 (93) 414 99 12</strong>
             <div className="messengers contactMessengers" aria-label="Месенджери">
               <a aria-label="Telegram" className="telegramIcon" href="#order">
                 <svg
