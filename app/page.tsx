@@ -231,7 +231,11 @@ export default function Home() {
                 <path d="M11.94 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.94 0Zm4.97 7.22c.2 0 .38.05.49.15.12.1.17.24.19.35.02.12.04.34.02.5-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.23-.46-1.9-.9-1.06-.7-1.65-1.13-2.68-1.8-1.18-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.1.02-1.79 1.14-5.06 3.35-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.25-1.35-.37-1.3-.79.03-.22.33-.44.9-.66 3.5-1.53 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64Z" />
               </svg>
             </a>
-            <a aria-label="Viber" className="viberIcon" href="#order">
+            <a
+              aria-label="Написати у Viber"
+              className="viberIcon"
+              href="viber://chat?number=%2B380934149912"
+            >
               <svg
                 aria-hidden="true"
                 fill="#7360f2"
@@ -242,7 +246,13 @@ export default function Home() {
                 <path d="M12 2.2c-5.3 0-9.6 3.7-9.6 8.3 0 2.6 1.4 4.9 3.6 6.4v3.2c0 .5.6.8 1 .5l3.2-1.9c.6.1 1.2.1 1.8.1 5.3 0 9.6-3.7 9.6-8.3S17.3 2.2 12 2.2Zm4.5 12.3c-.4.8-1.3 1.3-2.1 1.1-2.6-.6-5.7-3.5-6.4-6.2-.2-.8.3-1.7 1.1-2.1l.6-.3c.4-.2.9-.1 1.1.3l.8 1.3c.2.4.2.8-.1 1.1l-.4.4c-.2.2-.2.5 0 .8.4.7 1.2 1.5 1.9 1.9.3.2.6.2.8 0l.4-.4c.3-.3.8-.3 1.1-.1l1.3.8c.4.2.5.7.3 1.1l-.4.6Zm-3.9-8.8c2.2.2 3.7 1.8 3.9 3.9.1.4-.2.8-.6.8-.3 0-.6-.3-.7-.6-.2-1.6-1.1-2.6-2.8-2.8-.3 0-.6-.3-.6-.7s.4-.6.8-.6Zm.2 2c1.1.2 1.7.8 1.9 1.9.1.4-.2.7-.6.8-.3 0-.6-.2-.7-.6-.1-.5-.4-.8-.9-.9-.4-.1-.6-.4-.6-.7.1-.4.5-.6.9-.5Z" />
               </svg>
             </a>
-            <a aria-label="WhatsApp" className="whatsappIcon" href="#order">
+            <a
+              aria-label="Написати у WhatsApp"
+              className="whatsappIcon"
+              href="https://wa.me/380934149912"
+              rel="noreferrer"
+              target="_blank"
+            >
               <svg
                 aria-hidden="true"
                 fill="#25d366"
@@ -258,33 +268,14 @@ export default function Home() {
 
         <nav className="nav" aria-label="Головна навігація">
           <a className="brand" href="#top">
-            <span className="brandMark" aria-hidden="true">
-              <svg viewBox="0 0 44 44" role="img">
-                <path
-                  d="M22 4c6.9 7.8 12.8 15.2 12.8 23.4 0 7.4-5.4 12.6-12.8 12.6S9.2 34.8 9.2 27.4C9.2 19.2 15.1 11.8 22 4Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M15.2 28.1c0 4.5 3.2 7.9 7.6 7.9 2.3 0 4.4-.9 5.7-2.6-1.1.5-2.4.8-3.8.8-5.2 0-8.7-3.5-8.7-8.4 0-2.1.6-4.3 1.7-6.5-1.6 2.7-2.5 5.5-2.5 8.8Z"
-                  fill="#ffffff"
-                  opacity=".36"
-                />
-                <text
-                  x="22"
-                  y="28"
-                  fill="#ffffff"
-                  fontSize="10"
-                  fontWeight="800"
-                  textAnchor="middle"
-                >
-                  RO
-                </text>
-              </svg>
-            </span>
-            <span className="brandText">
-              <span>RO</span>
-              <span>filter</span>
-            </span>
+            <Image
+              className="brandLogo"
+              src="/ro-filter-logo.png"
+              alt="RO filter"
+              width={520}
+              height={290}
+              priority
+            />
           </a>
           <div className="navLinks">
             <a href="#catalog">Каталог</a>
@@ -299,17 +290,27 @@ export default function Home() {
       </header>
 
       <section className="hero">
+        <svg
+          aria-hidden="true"
+          className="heroWaves"
+          preserveAspectRatio="none"
+          viewBox="0 0 1440 240"
+        >
+          <path d="M-80 155C100 55 250 230 430 135S760 45 940 135s330 100 580-20" />
+          <path d="M-70 190C110 90 260 260 450 170S770 80 960 165s330 95 570-10" />
+          <path d="M-50 225C130 130 300 285 480 205S790 120 985 200s325 85 540 5" />
+        </svg>
         <div className="heroGrid">
           <div className="heroCopy">
             <p className="eyebrow">Фільтри для води з монтажем</p>
             <h1>Підберемо фільтр, встановимо і замінимо картриджі</h1>
             <p className="lead">
-              Оберіть фільтр, комплект картриджів або сервіс, а ми уточнимо
-              деталі телефоном і підкажемо найзручніше рішення.
+              Вирішуємо питання комплексно: від підбору системи до встановлення
+              та подальшого обслуговування.
             </p>
             <div className="heroActions">
-              <a className="button primary" href="#catalog">
-                Перейти до товарів
+              <a className="button primary" href="#services">
+                Переглянути послуги
               </a>
               <a className="button secondary" href="#order">
                 Залишити заявку
@@ -438,7 +439,7 @@ export default function Home() {
           <h2>Залиште контакти, і ми уточнимо деталі</h2>
           <p>
             Напишіть, що потрібно: купити фільтр, замінити картриджі або
-            встановити систему. Заявка піде на email та в Telegram.
+            встановити систему.
           </p>
           <div className="contactBox">
             <strong>0 (93) 414 99 12</strong>
@@ -454,7 +455,11 @@ export default function Home() {
                   <path d="M11.94 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.94 0Zm4.97 7.22c.2 0 .38.05.49.15.12.1.17.24.19.35.02.12.04.34.02.5-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.23-.46-1.9-.9-1.06-.7-1.65-1.13-2.68-1.8-1.18-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.1.02-1.79 1.14-5.06 3.35-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.25-1.35-.37-1.3-.79.03-.22.33-.44.9-.66 3.5-1.53 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64Z" />
                 </svg>
               </a>
-              <a aria-label="Viber" className="viberIcon" href="#order">
+              <a
+                aria-label="Написати у Viber"
+                className="viberIcon"
+                href="viber://chat?number=%2B380934149912"
+              >
                 <svg
                   aria-hidden="true"
                   fill="#7360f2"
@@ -465,7 +470,13 @@ export default function Home() {
                   <path d="M12 2.2c-5.3 0-9.6 3.7-9.6 8.3 0 2.6 1.4 4.9 3.6 6.4v3.2c0 .5.6.8 1 .5l3.2-1.9c.6.1 1.2.1 1.8.1 5.3 0 9.6-3.7 9.6-8.3S17.3 2.2 12 2.2Zm4.5 12.3c-.4.8-1.3 1.3-2.1 1.1-2.6-.6-5.7-3.5-6.4-6.2-.2-.8.3-1.7 1.1-2.1l.6-.3c.4-.2.9-.1 1.1.3l.8 1.3c.2.4.2.8-.1 1.1l-.4.4c-.2.2-.2.5 0 .8.4.7 1.2 1.5 1.9 1.9.3.2.6.2.8 0l.4-.4c.3-.3.8-.3 1.1-.1l1.3.8c.4.2.5.7.3 1.1l-.4.6Zm-3.9-8.8c2.2.2 3.7 1.8 3.9 3.9.1.4-.2.8-.6.8-.3 0-.6-.3-.7-.6-.2-1.6-1.1-2.6-2.8-2.8-.3 0-.6-.3-.6-.7s.4-.6.8-.6Zm.2 2c1.1.2 1.7.8 1.9 1.9.1.4-.2.7-.6.8-.3 0-.6-.2-.7-.6-.1-.5-.4-.8-.9-.9-.4-.1-.6-.4-.6-.7.1-.4.5-.6.9-.5Z" />
                 </svg>
               </a>
-              <a aria-label="WhatsApp" className="whatsappIcon" href="#order">
+              <a
+                aria-label="Написати у WhatsApp"
+                className="whatsappIcon"
+                href="https://wa.me/380934149912"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <svg
                   aria-hidden="true"
                   fill="#25d366"

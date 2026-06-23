@@ -1,12 +1,12 @@
 :root {
-  --bg: #f5f8fb;
-  --ink: #142321;
-  --muted: #60706e;
-  --line: #dce6e8;
-  --primary: #0b8793;
-  --primary-dark: #08616a;
+  --bg: #f7f6fb;
+  --ink: #171229;
+  --muted: #696579;
+  --line: #e2dfeb;
+  --primary: #0b004f;
+  --primary-dark: #070037;
   --accent: #f2b84b;
-  --soft: #e9f5f6;
+  --soft: #efedf8;
   --white: #ffffff;
 }
 
@@ -123,48 +123,15 @@ main {
 
 .brand {
   align-items: center;
-  color: var(--primary-dark);
   display: inline-flex;
-  font-weight: 900;
-  gap: 10px;
 }
 
-.brandMark {
-  align-items: center;
-  background: #e8f7fb;
-  border: 1px solid rgba(19, 158, 192, 0.18);
-  border-radius: 12px;
-  box-shadow: 0 10px 22px rgba(11, 92, 116, 0.12);
-  color: var(--primary);
-  display: inline-flex;
-  height: 44px;
-  justify-content: center;
-  width: 44px;
-}
-
-.brandMark svg {
+.brandLogo {
   display: block;
-  height: 34px;
-  width: 34px;
-}
-
-.brandText {
-  display: grid;
-  gap: 1px;
-  line-height: 1;
-}
-
-.brandText span:first-child {
-  font-size: 20px;
-  letter-spacing: 0;
-}
-
-.brandText span:last-child {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0;
-  text-transform: uppercase;
+  height: 56px;
+  object-fit: contain;
+  object-position: left center;
+  width: 101px;
 }
 
 .navLinks {
@@ -202,9 +169,38 @@ main {
 
 .hero {
   background:
-    radial-gradient(circle at 80% 16%, rgba(242, 184, 75, 0.24), transparent 24%),
-    linear-gradient(135deg, #ecf8f9 0%, #ffffff 58%, #e8f3ef 100%);
+    radial-gradient(circle at 80% 16%, rgba(242, 184, 75, 0.2), transparent 24%),
+    linear-gradient(135deg, #f1effa 0%, #ffffff 58%, #eeedf6 100%);
+  overflow: hidden;
   padding: 72px clamp(18px, 5vw, 72px) 76px;
+  position: relative;
+}
+
+.heroWaves {
+  bottom: -36px;
+  fill: none;
+  height: 240px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.heroWaves path {
+  stroke: rgba(11, 0, 79, 0.1);
+  stroke-linecap: round;
+  stroke-width: 13;
+  vector-effect: non-scaling-stroke;
+}
+
+.heroWaves path:nth-child(2) {
+  stroke: rgba(43, 72, 166, 0.1);
+  stroke-width: 11;
+}
+
+.heroWaves path:nth-child(3) {
+  stroke: rgba(11, 0, 79, 0.07);
+  stroke-width: 9;
 }
 
 .heroGrid {
@@ -212,6 +208,8 @@ main {
   display: grid;
   gap: 46px;
   grid-template-columns: 1.05fr 0.95fr;
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -293,7 +291,7 @@ h3 {
 }
 
 .heroCard {
-  box-shadow: 0 24px 70px rgba(8, 97, 106, 0.16);
+  box-shadow: 0 24px 70px rgba(11, 0, 79, 0.14);
   min-height: 420px;
   overflow: hidden;
   padding: 24px;
@@ -348,8 +346,8 @@ h3 {
 .productVisual {
   align-items: end;
   background:
-    linear-gradient(180deg, rgba(11, 135, 147, 0.08), rgba(11, 135, 147, 0)),
-    #f8fbfb;
+    linear-gradient(180deg, rgba(11, 0, 79, 0.07), rgba(11, 0, 79, 0)),
+    #faf9fd;
   border: 1px solid var(--line);
   border-radius: 8px;
   display: flex;
@@ -365,7 +363,7 @@ h3 {
 }
 
 .heroProductImage {
-  background: #f8fbfb;
+  background: #faf9fd;
   border: 1px solid var(--line);
   border-radius: 8px;
   height: 250px;
@@ -383,8 +381,8 @@ h3 {
 .productPhotoFrame {
   align-items: center;
   background:
-    linear-gradient(180deg, rgba(11, 135, 147, 0.08), rgba(11, 135, 147, 0)),
-    #f8fbfb;
+    linear-gradient(180deg, rgba(11, 0, 79, 0.07), rgba(11, 0, 79, 0)),
+    #faf9fd;
   border: 1px solid var(--line);
   border-radius: 8px;
   display: flex;
@@ -561,8 +559,8 @@ h3 {
 
 .categoryMark {
   align-items: center;
-  background: #e8f7fb;
-  border: 1px solid rgba(19, 158, 192, 0.18);
+  background: #efedf8;
+  border: 1px solid rgba(11, 0, 79, 0.14);
   border-radius: 14px;
   color: var(--primary-dark);
   display: inline-flex;
@@ -678,7 +676,7 @@ h3 {
 
 .modalClose {
   align-items: center;
-  background: #eef5f6;
+  background: #efedf8;
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--ink);
@@ -731,7 +729,7 @@ h3 {
 
 .checkboxOption {
   align-items: flex-start;
-  background: #f8fbfb;
+  background: #faf9fd;
   border: 1px solid var(--line);
   border-radius: 8px;
   cursor: pointer;
@@ -787,7 +785,7 @@ h3 {
 }
 
 .reviewsBand {
-  background: #edf5f7;
+  background: #efedf8;
   max-width: none;
 }
 
@@ -889,7 +887,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--primary);
-  outline: 3px solid rgba(11, 135, 147, 0.14);
+  outline: 3px solid rgba(11, 0, 79, 0.14);
 }
 
 .full,
@@ -977,6 +975,16 @@ textarea:focus {
   .hero {
     padding-bottom: 48px;
     padding-top: 48px;
+  }
+
+  .heroWaves {
+    bottom: -20px;
+    height: 145px;
+    width: 150%;
+  }
+
+  .heroWaves path {
+    stroke-width: 8;
   }
 
   h1 {
