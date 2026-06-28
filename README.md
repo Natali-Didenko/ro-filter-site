@@ -18,13 +18,15 @@ npm run dev
 Створіть файл `.env.local` поруч із `.env.example` і заповніть:
 
 ```bash
+TELEGRAM_BOT_TOKEN=123456:telegram-bot-token
+TELEGRAM_CHAT_ID=123456789
+
+# Необов'язково, якщо хочете дублювати заявки на email:
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
 ORDER_EMAIL_TO=orders@example.com
-TELEGRAM_BOT_TOKEN=123456:telegram-bot-token
-TELEGRAM_CHAT_ID=123456789
 ```
 
-Після цього форма надсилатиме заявку на email і в Telegram.
+Після цього форма надсилатиме заявку в Telegram. Якщо додати SMTP-налаштування, заявка також дублюватиметься на email.

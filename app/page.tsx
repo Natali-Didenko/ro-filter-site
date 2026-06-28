@@ -1,35 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
+import { catalogSections } from "./catalog/data";
 import OrderForm from "./components/OrderForm";
 import ProductOrderCards from "./components/ProductOrderCards";
 import type { Product } from "./components/ProductOrderCards";
-
-const categories = [
-  {
-    title: "Сервіс і монтаж",
-    description: "Встановлення, заміна картриджів і перевірка систем.",
-    icon: "service",
-  },
-  {
-    title: "Фільтри для питної води",
-    description:
-      "Зворотні осмоси під мийку для дому та фільтри для кафе і ресторанів.",
-    icon: "drinking",
-  },
-  {
-    title: "Змінні картриджі",
-    description: "Комплекти для осмосу, механічні та вугільні картриджі.",
-    icon: "cartridges",
-  },
-  {
-    title: "Магістральні фільтри",
-    description: "Колби та рішення для очищення води на вході в будинок.",
-    icon: "mainline",
-  },
-];
+import ServiceOrderButtons from "./components/ServiceOrderButtons";
+import type { ServiceOrder } from "./components/ServiceOrderButtons";
 
 const products: Product[] = [
   {
-    name: "Монтаж осмосу",
+    name: "Монтаж фільтра зворотного осмосу",
     price: "від 1 200 грн",
     status: "Виїзд майстра",
     badge: "Монтаж",
@@ -47,7 +27,7 @@ const products: Product[] = [
     ],
   },
   {
-    name: "Фільтр зворотного осмосу 5 ступенів",
+    name: "Фільтр зворотного осмосу 5 ступенів + монтаж в подарунок",
     price: "від 7 800 грн",
     oldPrice: "9 200 грн",
     status: "В наявності",
@@ -65,24 +45,7 @@ const products: Product[] = [
     ],
   },
   {
-    name: "Кухонні комбіновані змішувачі",
-    price: "від 3 900 грн",
-    status: "В наявності",
-    badge: "Хіт",
-    description: "Компактне рішення без накопичувального бака.",
-    image: "/product-images/inline.png",
-    imageAlt: "Проточний фільтр під мийку з підключенням до води",
-    type: "inline",
-    requestType: "filter",
-    options: [
-      { label: "Встановлення і виведення окремого крана для фільтру" },
-      { label: "Встановлення і під'єднання до основного змішувача" },
-      { label: "Підбір картриджів під якість води" },
-      { label: "Підключення фільтра без заміни змішувача" },
-    ],
-  },
-  {
-    name: "Змінні картриджі",
+    name: "Заміна картриджів у фільті зворотного осмосу",
     price: "від 1 350 грн",
     status: "В наявності",
     badge: "Сервіс",
@@ -98,43 +61,16 @@ const products: Product[] = [
       { label: "Мембрана для зворотного осмосу" },
     ],
   },
-  {
-    name: "Магістральні колби та картриджі",
-    price: "від 2 300 грн",
-    status: "Під замовлення",
-    badge: "Будинок",
-    description: "Попереднє очищення води для квартири чи приватного будинку.",
-    image: "/product-images/mainline.png",
-    imageAlt: "Магістральна колба з картриджем для очищення води",
-    type: "mainline",
-    requestType: "filter",
-    options: [
-      { label: "Механічний картридж від піску та іржі" },
-      { label: "Вугільний картридж від запаху та хлору" },
-      { label: "Картридж пом'якшення води" },
-      { label: "Комплект для магістральної колби" },
-    ],
-  },
 ];
 
-const services = [
-  "Підбір системи під воду, місце монтажу та бюджет",
-  "Заміна картриджів і мембран з перевіркою герметичності",
-  "Діагностика слабкого тиску, запаху або осаду у воді",
-];
-
-const offers = [
+const services: ServiceOrder[] = [
   {
-    title: "Картриджі в подарунок",
-    text: "При купівлі системи зворотного осмосу даруємо комплект картриджів для першої планової заміни.",
+    name: "Монтаж фільтра зворотного осмосу",
+    requestType: "installation",
   },
   {
-    title: "Монтаж зі знижкою",
-    text: "При замовленні фільтра разом із встановленням майстер зробить монтаж за спеціальною ціною.",
-  },
-  {
-    title: "Консультація безкоштовно",
-    text: "Підкажемо, який фільтр обрати для квартири чи будинку, ще до оформлення замовлення.",
+    name: "Заміна картриджів у фільті зворотного осмосу",
+    requestType: "cartridges",
   },
 ];
 
@@ -172,46 +108,6 @@ const reviews = [
   },
 ];
 
-function CategoryIcon({ type }: { type: string }) {
-  if (type === "service") {
-    return (
-      <svg aria-hidden="true" viewBox="0 0 48 48">
-        <path d="M29 8l11 11-7 7-4-4-13 13-6 2 2-6 13-13-3-3 7-7Z" />
-        <path d="M13 34l4 4" />
-      </svg>
-    );
-  }
-
-  if (type === "drinking") {
-    return (
-      <svg aria-hidden="true" viewBox="0 0 48 48">
-        <path d="M24 6c7 8 13 15 13 23a13 13 0 0 1-26 0c0-8 6-15 13-23Z" />
-        <path d="M18 31c1 4 4 6 8 6" />
-      </svg>
-    );
-  }
-
-  if (type === "cartridges") {
-    return (
-      <svg aria-hidden="true" viewBox="0 0 48 48">
-        <rect height="27" rx="5" width="8" x="10" y="13" />
-        <rect height="31" rx="5" width="8" x="20" y="9" />
-        <rect height="24" rx="5" width="8" x="30" y="16" />
-        <path d="M11 21h6M21 18h6M31 24h6" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg aria-hidden="true" viewBox="0 0 48 48">
-      <path d="M12 14h24" />
-      <path d="M18 14v-3h12v3" />
-      <rect height="27" rx="7" width="18" x="15" y="14" />
-      <path d="M20 24h8M20 30h8" />
-    </svg>
-  );
-}
-
 export default function Home() {
   return (
     <main>
@@ -220,7 +116,13 @@ export default function Home() {
           <span>0 (93) 414 99 12</span>
           <span>Щоденно з 10 до 19</span>
           <div className="messengers" aria-label="Месенджери">
-            <a aria-label="Telegram" className="telegramIcon" href="#order">
+            <a
+              aria-label="Написати у Telegram"
+              className="telegramIcon"
+              href="https://t.me/RO_filter"
+              rel="noreferrer"
+              target="_blank"
+            >
               <svg
                 aria-hidden="true"
                 fill="#229ed9"
@@ -344,22 +246,36 @@ export default function Home() {
       <section className="section" id="catalog">
         <div className="sectionHeader rowHeader">
           <div className="categoryHeaderText">
-            <p className="eyebrow">Категорії</p>
-            <h2>Основні напрямки</h2>
+            <p className="eyebrow">Каталог</p>
+            <h2>Все для чистої води в одному місці</h2>
+            <p>
+              Оберіть розділ, щоб переглянути товари. Якщо не впевнені, що
+              саме потрібно, ми підкажемо за моделлю фільтра або задачею.
+            </p>
             <a className="textLink" href="#order">
               Не знаєте що обрати?
             </a>
           </div>
         </div>
         <div className="categoryGrid">
-          {categories.map((category) => (
-            <article className="categoryCard" key={category.title}>
-              <div className="categoryMark">
-                <CategoryIcon type={category.icon} />
+          {catalogSections.map((category) => (
+            <Link
+              className="categoryCard catalogCard"
+              href={`/catalog/${category.slug}`}
+              key={category.slug}
+            >
+              <div className="catalogImageFrame">
+                <Image
+                  src={category.image}
+                  alt={category.imageAlt}
+                  width={480}
+                  height={300}
+                />
               </div>
               <h3>{category.title}</h3>
               <p>{category.description}</p>
-            </article>
+              <span>Переглянути</span>
+            </Link>
           ))}
         </div>
       </section>
@@ -372,21 +288,6 @@ export default function Home() {
         <ProductOrderCards products={products} />
       </section>
 
-      <section className="offersBand">
-        <div className="sectionHeader">
-          <p className="eyebrow">Акційні пропозиції</p>
-          <h2>Вигідні комплекти для старту</h2>
-        </div>
-        <div className="offersGrid">
-          {offers.map((offer) => (
-            <article className="offerCard" key={offer.title}>
-              <h3>{offer.title}</h3>
-              <p>{offer.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="serviceBand" id="services">
         <div>
           <p className="eyebrow">Послуги</p>
@@ -396,11 +297,7 @@ export default function Home() {
             заявку - майстер уточнить деталі та підкаже найкраще рішення.
           </p>
         </div>
-        <ul className="serviceList">
-          {services.map((service) => (
-            <li key={service}>{service}</li>
-          ))}
-        </ul>
+        <ServiceOrderButtons services={services} />
       </section>
 
       <section className="section" id="delivery">
@@ -444,7 +341,13 @@ export default function Home() {
           <div className="contactBox">
             <strong>0 (93) 414 99 12</strong>
             <div className="messengers contactMessengers" aria-label="Месенджери">
-              <a aria-label="Telegram" className="telegramIcon" href="#order">
+              <a
+                aria-label="Написати у Telegram"
+                className="telegramIcon"
+                href="https://t.me/RO_filter"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <svg
                   aria-hidden="true"
                   fill="#229ed9"

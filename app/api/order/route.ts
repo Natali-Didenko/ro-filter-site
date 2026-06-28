@@ -15,6 +15,7 @@ const requestTypeLabels: Record<string, string> = {
   cartridges: "Заміна картриджів",
   installation: "Встановлення фільтра",
   consultation: "Консультація",
+  product: "Замовлення товару",
 };
 
 function clean(value: unknown) {
@@ -76,6 +77,19 @@ async function sendEmail(message: string) {
   });
 }
 
+function hasEmailSettings() {
+  return Boolean(
+    process.env.SMTP_HOST &&
+      process.env.SMTP_USER &&
+      process.env.SMTP_PASS &&
+      process.env.ORDER_EMAIL_TO
+  );
+}
+
+function hasTelegramSettings() {
+  return Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
+}
+
 async function sendTelegram(message: string) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -97,7 +111,8 @@ async function sendTelegram(message: string) {
   );
 
   if (!response.ok) {
-    throw new Error("Telegram request failed");
+    const details = await response.text().catch(() => "");
+    throw new Error(`Telegram request failed${details ? `: ${details}` : ""}`);
   }
 }
 
@@ -123,14 +138,34 @@ export async function POST(request: Request) {
   const message = buildMessage(payload);
 
   try {
-    await Promise.all([sendEmail(message), sendTelegram(message)]);
+    const channels: Promise<void>[] = [];
+
+    if (hasEmailSettings()) {
+      channels.push(sendEmail(message));
+    }
+
+    if (hasTelegramSettings()) {
+      channels.push(sendTelegram(message));
+    }
+
+    if (!channels.length) {
+      return NextResponse.json(
+        {
+          error:
+            "Заявку не відправлено: налаштуйте Telegram або email у .env.local.",
+        },
+        { status: 500 }
+      );
+    }
+
+    await Promise.all(channels);
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error(error);
     return NextResponse.json(
       {
         error:
-          "Заявку не відправлено: перевірте налаштування email і Telegram у .env.local.",
+          "Заявку не відправлено: перевірте налаштування Telegram або email у .env.local.",
       },
       { status: 500 }
     );
