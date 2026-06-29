@@ -7,6 +7,9 @@
   --primary-dark: #070037;
   --accent: #f2b84b;
   --soft: #efedf8;
+  --section-blue: #f3f6ff;
+  --section-warm: #fff8e8;
+  --section-lilac: #efedf8;
   --white: #ffffff;
 }
 
@@ -178,31 +181,32 @@ main {
 }
 
 .heroWaves {
-  bottom: -30px;
+  bottom: 0;
   fill: none;
-  height: 210px;
-  left: 38%;
-  opacity: 0.72;
+  height: 190px;
+  left: 0;
+  opacity: 0.62;
   pointer-events: none;
   position: absolute;
-  width: 72%;
+  width: 100%;
+  z-index: 0;
 }
 
 .heroWaves path {
-  stroke: rgba(11, 0, 79, 0.075);
+  stroke: rgba(11, 0, 79, 0.08);
   stroke-linecap: round;
-  stroke-width: 8;
+  stroke-width: 5;
   vector-effect: non-scaling-stroke;
 }
 
 .heroWaves path:nth-child(2) {
-  stroke: rgba(43, 72, 166, 0.065);
-  stroke-width: 7;
+  stroke: rgba(11, 0, 79, 0.06);
+  stroke-width: 4;
 }
 
 .heroWaves path:nth-child(3) {
-  stroke: rgba(11, 0, 79, 0.05);
-  stroke-width: 6;
+  stroke: rgba(11, 0, 79, 0.045);
+  stroke-width: 4;
 }
 
 .heroGrid {
@@ -494,6 +498,38 @@ h3 {
   padding: 78px clamp(18px, 4vw, 34px);
 }
 
+.section,
+.serviceBand,
+.reviewsBand,
+.orderSection {
+  box-shadow: 0 0 0 100vmax var(--section-bg, transparent);
+  clip-path: inset(0 -100vmax);
+}
+
+#catalog {
+  --section-bg: var(--white);
+  background: var(--white);
+}
+
+.productsSection {
+  --section-bg: var(--section-blue);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0)),
+    var(--section-blue);
+}
+
+.serviceBand {
+  --section-bg: #fbfbff;
+  background: #fbfbff;
+}
+
+#delivery {
+  --section-bg: var(--section-warm);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0)),
+    var(--section-warm);
+}
+
 .rowHeader {
   align-items: flex-start;
   display: flex;
@@ -552,6 +588,10 @@ h3 {
 .reviewsGrid,
 .offersGrid {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.infoGrid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .reviewsGrid,
@@ -1049,7 +1089,10 @@ h3 {
 }
 
 .reviewsBand {
-  background: #efedf8;
+  --section-bg: var(--section-lilac);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
+    var(--section-lilac);
   max-width: none;
 }
 
@@ -1087,7 +1130,9 @@ h3 {
 }
 
 .orderSection {
+  --section-bg: var(--white);
   align-items: start;
+  background: var(--white);
   display: grid;
   gap: 42px;
   grid-template-columns: 0.82fr 1.18fr;
@@ -1264,14 +1309,12 @@ textarea:focus {
   }
 
   .heroWaves {
-    bottom: -14px;
-    height: 118px;
-    left: 18%;
-    width: 105%;
+    height: 104px;
+    opacity: 0.48;
   }
 
   .heroWaves path {
-    stroke-width: 5;
+    stroke-width: 3;
   }
 
   h1 {

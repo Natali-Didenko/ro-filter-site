@@ -38,6 +38,7 @@ export default function OrderForm() {
 
   return (
     <form className="orderForm" onSubmit={handleSubmit}>
+      <input name="requestType" type="hidden" value="consultation" />
       <label>
         Ім&apos;я
         <input name="name" placeholder="Олена" required />
@@ -45,15 +46,6 @@ export default function OrderForm() {
       <label>
         Телефон
         <input name="phone" placeholder="+380..." required type="tel" />
-      </label>
-      <label>
-        Що вас цікавить?
-        <select name="requestType" defaultValue="filter">
-          <option value="filter">Купити фільтр</option>
-          <option value="cartridges">Заміна картриджів</option>
-          <option value="installation">Встановлення фільтра</option>
-          <option value="consultation">Консультація</option>
-        </select>
       </label>
       <label className="full">
         Коментар
