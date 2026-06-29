@@ -2,15 +2,402 @@
 <html lang="uk">
   <head>
     <meta charset="utf-8" />
-    <meta content="0; url=./local-preview.html" http-equiv="refresh" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RO filter</title>
     <link rel="icon" href="./app/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./app/globals.css" />
   </head>
   <body>
-    <p>
-      Відкриваємо сайт:
-      <a href="./local-preview.html">RO filter</a>
-    </p>
+    <main>
+      <header class="siteHeader" id="top">
+        <div class="topBar">
+          <span>0 (93) 414 99 12</span>
+          <span>Щоденно з 10 до 19</span>
+          <div class="messengers" aria-label="Месенджери">
+            <a aria-label="Написати у Telegram" class="telegramIcon" href="https://t.me/RO_filter" rel="noreferrer" target="_blank">
+              <svg aria-hidden="true" fill="#229ed9" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M11.94 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.94 0Zm4.97 7.22c.2 0 .38.05.49.15.12.1.17.24.19.35.02.12.04.34.02.5-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.23-.46-1.9-.9-1.06-.7-1.65-1.13-2.68-1.8-1.18-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.1.02-1.79 1.14-5.06 3.35-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.25-1.35-.37-1.3-.79.03-.22.33-.44.9-.66 3.5-1.53 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64Z" />
+              </svg>
+            </a>
+            <a aria-label="Написати у Viber" class="viberIcon" href="viber://chat?number=%2B380934149912">
+              <svg aria-hidden="true" fill="#7360f2" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M12 2.2c-5.3 0-9.6 3.7-9.6 8.3 0 2.6 1.4 4.9 3.6 6.4v3.2c0 .5.6.8 1 .5l3.2-1.9c.6.1 1.2.1 1.8.1 5.3 0 9.6-3.7 9.6-8.3S17.3 2.2 12 2.2Zm4.5 12.3c-.4.8-1.3 1.3-2.1 1.1-2.6-.6-5.7-3.5-6.4-6.2-.2-.8.3-1.7 1.1-2.1l.6-.3c.4-.2.9-.1 1.1.3l.8 1.3c.2.4.2.8-.1 1.1l-.4.4c-.2.2-.2.5 0 .8.4.7 1.2 1.5 1.9 1.9.3.2.6.2.8 0l.4-.4c.3-.3.8-.3 1.1-.1l1.3.8c.4.2.5.7.3 1.1l-.4.6Zm-3.9-8.8c2.2.2 3.7 1.8 3.9 3.9.1.4-.2.8-.6.8-.3 0-.6-.3-.7-.6-.2-1.6-1.1-2.6-2.8-2.8-.3 0-.6-.3-.6-.7s.4-.6.8-.6Zm.2 2c1.1.2 1.7.8 1.9 1.9.1.4-.2.7-.6.8-.3 0-.6-.2-.7-.6-.1-.5-.4-.8-.9-.9-.4-.1-.6-.4-.6-.7.1-.4.5-.6.9-.5Z" />
+              </svg>
+            </a>
+            <a aria-label="Написати у WhatsApp" class="whatsappIcon" href="https://wa.me/380934149912" rel="noreferrer" target="_blank">
+              <svg aria-hidden="true" fill="#25d366" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M20.46 3.49A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.49-8.42ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.87 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Головна навігація">
+          <a class="brand" href="#top">
+            <img class="brandLogo" src="./public/ro-filter-logo.png" alt="RO filter" />
+          </a>
+          <div class="navLinks">
+            <a href="#catalog">Каталог</a>
+            <a href="#services">Послуги</a>
+            <a href="#delivery">Доставка</a>
+            <a href="#contacts">Контакти</a>
+          </div>
+          <a class="navButton" href="#order">Замовити дзвінок</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <svg class="heroWaves" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1440 240">
+          <path d="M-80 155C100 55 250 230 430 135S760 45 940 135s330 100 580-20"></path>
+          <path d="M-70 190C110 90 260 260 450 170S770 80 960 165s330 95 570-10"></path>
+          <path d="M-50 225C130 130 300 285 480 205S790 120 985 200s325 85 540 5"></path>
+        </svg>
+        <div class="heroGrid">
+          <div class="heroCopy">
+            <p class="eyebrow">Фільтри для води з монтажем</p>
+            <h1>Підберемо фільтр, встановимо і замінимо картриджі</h1>
+            <p class="lead">
+              Вирішуємо питання комплексно: від підбору системи до встановлення
+              та подальшого обслуговування.
+            </p>
+            <div class="heroActions">
+              <a class="button primary" href="#services">Переглянути послуги</a>
+              <a class="button secondary" href="#order">Залишити заявку</a>
+            </div>
+          </div>
+
+          <div class="heroPanel" aria-label="Приклад системи очищення">
+            <div class="heroCard">
+              <span class="heroStatus">Питна вода</span>
+              <div class="heroProductImage">
+                <img src="./public/product-images/hero-osmosis-install.png" alt="Система зворотного осмосу встановлена під кухонною мийкою" />
+              </div>
+              <strong>Осмос + монтаж</strong>
+              <p>Популярне рішення для кухні</p>
+            </div>
+            <div class="heroMetric">
+              <strong>24 год</strong>
+              <span>і ви п'єте чисту воду</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="catalog">
+        <div class="sectionHeader rowHeader">
+          <div class="categoryHeaderText">
+            <p class="eyebrow">Каталог</p>
+            <h2>Все для чистої води в одному місці</h2>
+            <p>
+              Оберіть розділ, щоб переглянути товари. Якщо не впевнені, що
+              саме потрібно, ми підкажемо за моделлю фільтра або задачею.
+            </p>
+            <a class="textLink" href="#order">Не знаєте що обрати?</a>
+          </div>
+        </div>
+        <div class="categoryGrid">
+          <a class="categoryCard catalogCard" href="./catalog/reverse-osmosis/index.html">
+            <div class="catalogImageFrame">
+              <img src="./public/product-images/osmosis.png" alt="Система зворотного осмосу з баком і краном" />
+            </div>
+            <h3>Фільтри зворотного осмосу</h3>
+            <p>Системи під мийку для стабільно чистої питної води вдома, в офісі або закладі.</p>
+            <span>Переглянути</span>
+          </a>
+          <a class="categoryCard catalogCard" href="./catalog/replacement-cartridges/index.html">
+            <div class="catalogImageFrame">
+              <img src="./public/product-images/cartridges.png" alt="Комплект змінних картриджів для фільтра води" />
+            </div>
+            <h3>Змінні картриджі для фільтрів</h3>
+            <p>Комплекти для планової заміни, мембрани та картриджі під різні системи очищення.</p>
+            <span>Переглянути</span>
+          </a>
+          <a class="categoryCard catalogCard" href="./catalog/mainline-filters/index.html">
+            <div class="catalogImageFrame">
+              <img src="./public/product-images/mainline.png" alt="Магістральний фільтр для очищення води" />
+            </div>
+            <h3>Магістральні фільтри</h3>
+            <p>Колби та картриджі для попереднього очищення води на вході у квартиру чи будинок.</p>
+            <span>Переглянути</span>
+          </a>
+          <a class="categoryCard catalogCard" href="./catalog/kitchen-faucets/index.html">
+            <div class="catalogImageFrame">
+              <img src="./public/product-images/inline.png" alt="Кухонний змішувач або компактна система під мийку" />
+            </div>
+            <h3>Змішувачі для кухонної мийки</h3>
+            <p>Кухонні змішувачі, які зручно поєднати з системою фільтрації води.</p>
+            <span>Переглянути</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section productsSection" id="products">
+        <div class="sectionHeader">
+          <p class="eyebrow">Рішення та послуги</p>
+          <h2>Популярні позиції</h2>
+        </div>
+        <div class="productGrid">
+          <article class="productCard">
+            <div class="productBadge">Монтаж</div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/install.png" alt="Монтаж фільтра зворотного осмосу під мийкою" />
+            </div>
+            <div class="productBody">
+              <span class="stock">Виїзд майстра</span>
+              <h3>Монтаж фільтра зворотного осмосу</h3>
+              <p>Акуратне встановлення системи з підключенням крана та перевіркою.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <strong>від 1 200 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Монтаж фільтра зворотного осмосу"
+                data-options="Стандартний монтаж осмосу під мийкою|Виведення окремого крана для фільтрованої води|Підключення до основного змішувача 3-в-1|Демонтаж старої системи перед встановленням"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+          <article class="productCard">
+            <div class="productBadge">-15%</div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/osmosis.png" alt="Система зворотного осмосу з баком і краном" />
+            </div>
+            <div class="productBody">
+              <span class="stock">В наявності</span>
+              <h3>Фільтр зворотного осмосу 5 ступенів + монтаж в подарунок</h3>
+              <p>Для сім'ї, яка хоче стабільно чисту питну воду щодня.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <span>9 200 грн</span>
+                <strong>від 7 800 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Фільтр зворотного осмосу 5 ступенів + монтаж в подарунок"
+                data-options="Осмос 5 ступенів|Осмос 6 ступенів з мінералізатором|Осмос з помпою для низького тиску|Осмос із баком збільшеного об'єму"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+          <article class="productCard">
+            <div class="productBadge">Сервіс</div>
+            <div class="productPhotoFrame">
+              <img src="./public/product-images/cartridges.png" alt="Комплект змінних картриджів для фільтра води" />
+            </div>
+            <div class="productBody">
+              <span class="stock">В наявності</span>
+              <h3>Заміна картриджів у фільті зворотного осмосу</h3>
+              <p>Планова заміна для осмосу або проточної системи.</p>
+            </div>
+            <div class="cardFooter">
+              <div class="priceBlock">
+                <strong>від 1 350 грн</strong>
+              </div>
+              <button
+                class="smallButton previewOrderButton"
+                data-item="Заміна картриджів у фільті зворотного осмосу"
+                data-options="Комплект картриджів для осмосу 5 ступенів|Комплект картриджів з мінералізатором|Комплект для проточного фільтра під мийку|Мембрана для зворотного осмосу"
+                type="button"
+              >
+                Замовити
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="serviceBand" id="services">
+        <div>
+          <p class="eyebrow">Послуги</p>
+          <h2>Монтаж і заміна без зайвої складності</h2>
+          <p>
+            Якщо не знаєте модель фільтра або які картриджі потрібні, залиште
+            заявку - майстер уточнить деталі та підкаже найкраще рішення.
+          </p>
+        </div>
+        <div class="serviceActions">
+          <article class="serviceAction">
+            <h3>Монтаж фільтра зворотного осмосу</h3>
+            <button
+              class="smallButton previewOrderButton"
+              data-item="Монтаж фільтра зворотного осмосу"
+              data-options="Монтаж фільтра зворотного осмосу"
+              type="button"
+            >
+              Залишити заявку
+            </button>
+          </article>
+          <article class="serviceAction">
+            <h3>Заміна картриджів у фільті зворотного осмосу</h3>
+            <button
+              class="smallButton previewOrderButton"
+              data-item="Заміна картриджів у фільті зворотного осмосу"
+              data-options="Заміна картриджів у фільті зворотного осмосу"
+              type="button"
+            >
+              Залишити заявку
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="delivery">
+        <div class="sectionHeader">
+          <p class="eyebrow">Інформація</p>
+          <h2>Що варто знати перед замовленням</h2>
+        </div>
+        <div class="infoGrid">
+          <article class="infoItem">
+            <h3>Доставка</h3>
+            <p>Відправляємо Новою поштою або доставляємо майстром разом із монтажем у зручний час.</p>
+          </article>
+          <article class="infoItem">
+            <h3>Оплата</h3>
+            <p>Оплата карткою, готівкою або на рахунок компанії.</p>
+          </article>
+          <article class="infoItem">
+            <h3>Гарантія</h3>
+            <p>Даємо гарантію на обладнання та роботу, а якщо щось піде не так - швидко допоможемо.</p>
+          </article>
+          <article class="infoItem">
+            <h3>Контакти</h3>
+            <p>Залиште заявку або напишіть у месенджер. Менеджер уточнить модель, адресу та час.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reviewsBand">
+        <div class="sectionHeader">
+          <p class="eyebrow">Відгуки</p>
+          <h2>Що важливо клієнтам</h2>
+        </div>
+        <div class="reviewsGrid">
+          <article class="reviewCard">
+            <p>Поставили осмос під мийку, все акуратно. Вода на смак стала набагато кращою.</p>
+            <strong>Влад</strong>
+          </article>
+          <article class="reviewCard">
+            <p>Допомогли підібрати картриджі і швидко замінили. Сподобалося, що пояснили простими словами.</p>
+            <strong>Вікторія</strong>
+          </article>
+          <article class="reviewCard">
+            <p>Замовляв фільтр для будинку. Майстер перевірив тиск і порадив правильну комплектацію.</p>
+            <strong>Роман</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="orderSection" id="order">
+        <div class="orderIntro" id="contacts">
+          <p class="eyebrow">Швидке замовлення</p>
+          <h2>Залиште контакти, і ми уточнимо деталі</h2>
+          <p>
+            Напишіть, що потрібно: купити фільтр, замінити картриджі або
+            встановити систему.
+          </p>
+          <div class="contactBox">
+            <strong>0 (93) 414 99 12</strong>
+            <div class="messengers contactMessengers" aria-label="Месенджери">
+              <a aria-label="Написати у Telegram" class="telegramIcon" href="https://t.me/RO_filter" rel="noreferrer" target="_blank">
+                <svg aria-hidden="true" fill="#229ed9" height="24" viewBox="0 0 24 24" width="24">
+                  <path d="M11.94 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.94 0Zm4.97 7.22c.2 0 .38.05.49.15.12.1.17.24.19.35.02.12.04.34.02.5-.18 1.9-.96 6.5-1.36 8.63-.17.9-.5 1.2-.82 1.23-.7.06-1.23-.46-1.9-.9-1.06-.7-1.65-1.13-2.68-1.8-1.18-.78-.42-1.21.26-1.91.18-.18 3.25-2.98 3.31-3.23.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.1.02-1.79 1.14-5.06 3.35-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.87-.44-.75-.25-1.35-.37-1.3-.79.03-.22.33-.44.9-.66 3.5-1.53 5.83-2.53 7-3.02 3.33-1.39 4.02-1.63 4.47-1.64Z" />
+                </svg>
+              </a>
+              <a aria-label="Написати у Viber" class="viberIcon" href="viber://chat?number=%2B380934149912">
+                <svg aria-hidden="true" fill="#7360f2" height="24" viewBox="0 0 24 24" width="24">
+                  <path d="M12 2.2c-5.3 0-9.6 3.7-9.6 8.3 0 2.6 1.4 4.9 3.6 6.4v3.2c0 .5.6.8 1 .5l3.2-1.9c.6.1 1.2.1 1.8.1 5.3 0 9.6-3.7 9.6-8.3S17.3 2.2 12 2.2Zm4.5 12.3c-.4.8-1.3 1.3-2.1 1.1-2.6-.6-5.7-3.5-6.4-6.2-.2-.8.3-1.7 1.1-2.1l.6-.3c.4-.2.9-.1 1.1.3l.8 1.3c.2.4.2.8-.1 1.1l-.4.4c-.2.2-.2.5 0 .8.4.7 1.2 1.5 1.9 1.9.3.2.6.2.8 0l.4-.4c.3-.3.8-.3 1.1-.1l1.3.8c.4.2.5.7.3 1.1l-.4.6Zm-3.9-8.8c2.2.2 3.7 1.8 3.9 3.9.1.4-.2.8-.6.8-.3 0-.6-.3-.7-.6-.2-1.6-1.1-2.6-2.8-2.8-.3 0-.6-.3-.6-.7s.4-.6.8-.6Zm.2 2c1.1.2 1.7.8 1.9 1.9.1.4-.2.7-.6.8-.3 0-.6-.2-.7-.6-.1-.5-.4-.8-.9-.9-.4-.1-.6-.4-.6-.7.1-.4.5-.6.9-.5Z" />
+                </svg>
+              </a>
+              <a aria-label="Написати у WhatsApp" class="whatsappIcon" href="https://wa.me/380934149912" rel="noreferrer" target="_blank">
+                <svg aria-hidden="true" fill="#25d366" height="24" viewBox="0 0 24 24" width="24">
+                  <path d="M20.46 3.49A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.49-8.42ZM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.43 9.88-9.87 9.88Zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <form class="orderForm">
+          <label>Ім'я<input placeholder="Олена" /></label>
+          <label>Телефон<input placeholder="+380..." /></label>
+          <label>
+            Що вас цікавить?
+            <select>
+              <option>Купити фільтр</option>
+              <option>Заміна картриджів</option>
+              <option>Встановлення фільтра</option>
+              <option>Консультація</option>
+            </select>
+          </label>
+          <label class="full">
+            Коментар
+            <textarea rows="5" placeholder="Напишіть, яка послуга вас цікавить, район, зручний час або інші деталі"></textarea>
+          </label>
+          <button class="submitButton" type="button">Замовити</button>
+        </form>
+      </section>
+
+      <div class="modalOverlay" hidden id="previewModal">
+        <div class="orderModal" role="dialog" aria-modal="true" aria-labelledby="previewModalTitle">
+          <button class="modalClose" id="previewModalClose" type="button" aria-label="Закрити">×</button>
+          <p class="eyebrow">Замовлення</p>
+          <h2 id="previewModalTitle">Замовлення</h2>
+          <p class="modalLead">Оберіть потрібні позиції, залиште телефон, і ми уточнимо деталі.</p>
+          <form class="modalForm">
+            <fieldset class="optionGroup">
+              <legend>Що вас цікавить?</legend>
+              <div id="previewModalOptions"></div>
+            </fieldset>
+            <label>Ім'я<input placeholder="Олена" /></label>
+            <label>Телефон<input placeholder="+380..." /></label>
+            <label class="full">
+              Коментар
+              <textarea rows="4" placeholder="Напишіть, яка послуга вас цікавить, район, зручний час або інші деталі"></textarea>
+            </label>
+            <button class="submitButton" type="button">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      const modal = document.getElementById("previewModal");
+      const title = document.getElementById("previewModalTitle");
+      const optionsRoot = document.getElementById("previewModalOptions");
+      const closeButton = document.getElementById("previewModalClose");
+
+      document.querySelectorAll(".previewOrderButton").forEach((button) => {
+        button.addEventListener("click", () => {
+          title.textContent = button.dataset.item || "Замовлення";
+          optionsRoot.innerHTML = "";
+
+          (button.dataset.options || "")
+            .split("|")
+            .filter(Boolean)
+            .forEach((option) => {
+              const label = document.createElement("label");
+              label.className = "checkboxOption";
+              label.innerHTML = `<input type="checkbox" /><span>${option}</span>`;
+              optionsRoot.appendChild(label);
+            });
+
+          modal.hidden = false;
+        });
+      });
+
+      function closeModal() {
+        modal.hidden = true;
+      }
+
+      closeButton.addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+    </script>
   </body>
 </html>
