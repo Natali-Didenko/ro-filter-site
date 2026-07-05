@@ -889,37 +889,26 @@ h3 {
 }
 
 .catalogPageHero {
+  padding: 72px clamp(18px, 4vw, 34px) 30px;
+}
+
+.catalogBackLink {
   align-items: center;
-  display: grid;
-  gap: 34px;
-  grid-template-columns: 1fr 0.74fr;
-  min-height: 100vh;
-  padding: 72px clamp(18px, 4vw, 34px);
+  color: var(--primary);
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 800;
+  gap: 8px;
+  margin-bottom: 18px;
+  text-decoration: none;
+}
+
+.catalogBackLink:hover {
+  text-decoration: underline;
 }
 
 .catalogPageHero h1 {
   max-width: 900px;
-}
-
-.catalogHeroImage {
-  align-items: center;
-  background:
-    linear-gradient(180deg, rgba(11, 0, 79, 0.07), rgba(11, 0, 79, 0)),
-    #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  display: flex;
-  height: 300px;
-  justify-content: center;
-  overflow: hidden;
-  padding: 20px;
-}
-
-.catalogHeroImage img {
-  display: block;
-  height: 100%;
-  object-fit: contain;
-  width: 100%;
 }
 
 .catalogProducts {
@@ -1222,7 +1211,9 @@ textarea:focus {
 }
 
 .formMessage.success {
-  background: #e7f8ef;
+  background: rgba(218, 247, 229, 0.78);
+  border: 1px solid rgba(71, 174, 111, 0.28);
+  box-shadow: 0 12px 28px rgba(16, 92, 49, 0.08);
   color: #14633d;
 }
 

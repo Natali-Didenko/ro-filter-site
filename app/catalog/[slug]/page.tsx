@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import CatalogProductCards from "../CatalogProductCards";
 import {
@@ -46,19 +46,10 @@ export default async function CatalogSectionPage({
   return (
     <main>
       <section className="catalogPageHero">
-        <div>
-          <h1>{section.title}</h1>
-          <p className="lead">{section.description}</p>
-        </div>
-        <div className="catalogHeroImage">
-          <Image
-            src={section.image}
-            alt={section.imageAlt}
-            width={720}
-            height={450}
-            priority
-          />
-        </div>
+        <Link className="catalogBackLink" href="/">
+          ← На головну
+        </Link>
+        <h1>{section.title}</h1>
       </section>
       {section.slug === "reverse-osmosis" ? (
         <CatalogProductCards products={reverseOsmosisProducts} />

@@ -92,7 +92,7 @@ export default function CatalogProductCards({
     ];
 
     if (includeInstallation) {
-      selectedOptions.push("Додатково: монтаж");
+      selectedOptions.push("Додатково: монтаж, тільки у м. Львів");
     }
 
     const response = await fetch("/api/order", {
@@ -110,7 +110,7 @@ export default function CatalogProductCards({
 
     if (response.ok) {
       setSubmitState("success");
-      setMessage("Дякуємо! Заявку відправлено. Ми скоро зв'яжемося з вами.");
+      setMessage("Ваша заявка прийнята. Наш менеджер скоро зв'яжеться з вами.");
       form.reset();
       return;
     }
@@ -197,7 +197,7 @@ export default function CatalogProductCards({
               </label>
               <label className="optionCheck full">
                 <input name="installation" type="checkbox" />
-                Додати послугу монтажу
+                Додати послугу монтажу (тільки у м. Львів)
               </label>
               <label className="full">
                 Коментар

@@ -54,7 +54,7 @@ export default function ServiceOrderButtons({
 
     if (response.ok) {
       setSubmitState("success");
-      setMessage("Дякуємо! Заявку відправлено. Ми скоро зв'яжемося з вами.");
+      setMessage("Ваша заявка прийнята. Наш менеджер скоро зв'яжеться з вами.");
       form.reset();
       return;
     }

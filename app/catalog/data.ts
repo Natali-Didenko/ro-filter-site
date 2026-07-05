@@ -76,12 +76,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/sion/sion-6-1.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 1" },
       { src: "/product-images/sion/sion-6-2.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 2" },
-      { src: "/product-images/sion/sion-6-3.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 3" },
-      { src: "/product-images/sion/sion-6-4.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 4" },
-      { src: "/product-images/sion/sion-6-5.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 5" },
-      { src: "/product-images/sion/sion-6-6.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 6" },
-      { src: "/product-images/sion/sion-6-7.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 7" },
-      { src: "/product-images/sion/sion-6-8.jpg", alt: "Фільтр зворотного осмосу Sion 6-75 - фото 8" },
     ],
     about: [
       "Sion 6-75 - система зворотного осмосу для глибокого очищення питної води від механічних домішок, запахів, присмаків, бактерій і вірусів.",
@@ -109,11 +103,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/sion/sion-5-1.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 - фото 1" },
       { src: "/product-images/sion/sion-5-2.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 - фото 2" },
-      { src: "/product-images/sion/sion-5-3.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 - фото 3" },
-      { src: "/product-images/sion/sion-5-4.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 - фото 4" },
-      { src: "/product-images/sion/sion-5-5.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 - фото 5" },
-      { src: "/product-images/sion/sion-5-6.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 - фото 6" },
-      { src: "/product-images/sion/sion-5-7.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 - фото 7" },
     ],
     about: [
       "Sion 5-75 - базова система зворотного осмосу для очищення питної води під кухонною мийкою.",
@@ -140,11 +129,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/filtr-zvorotnyogo-osmosu-sion-4-75-z-nasosom-1.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 з насосом - фото 1" },
       { src: "/product-images/reverse-osmosis/filtr-zvorotnyogo-osmosu-sion-4-75-z-nasosom-2.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 з насосом - фото 2" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnyogo-osmosu-sion-4-75-z-nasosom-3.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 з насосом - фото 3" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnyogo-osmosu-sion-4-75-z-nasosom-4.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 з насосом - фото 4" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnyogo-osmosu-sion-4-75-z-nasosom-5.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 з насосом - фото 5" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnyogo-osmosu-sion-4-75-z-nasosom-6.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 з насосом - фото 6" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnyogo-osmosu-sion-4-75-z-nasosom-7.jpg", alt: "Фільтр зворотного осмосу Sion 5-75 з насосом - фото 7" },
     ],
     about: [
       "Sion 5-75 з насосом - система зворотного осмосу для стабільного очищення питної води навіть за нижчого тиску у водопроводі.",
@@ -170,10 +154,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-5-50m-z-mineralizatorom-1.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50 з мінералізацією - фото 1" },
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-5-50m-z-mineralizatorom-2.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50 з мінералізацією - фото 2" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-5-50m-z-mineralizatorom-3.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50 з мінералізацією - фото 3" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-5-50m-z-mineralizatorom-4.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50 з мінералізацією - фото 4" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-5-50m-z-mineralizatorom-5.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50 з мінералізацією - фото 5" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-5-50m-z-mineralizatorom-6.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50 з мінералізацією - фото 6" },
     ],
     about: [
       "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50 з мінералізацією.",
@@ -199,12 +179,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-1.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 1" },
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-2.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 2" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-3.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 3" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-4.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 4" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-5.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 5" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-6.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 6" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-7.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 7" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-52-1-8.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard PRO 5-50P з мінералізацією та помпою - фото 8" },
     ],
     about: [
       "Фільтр зворотного осмосу Ecosoft Standard PRO з мінералізацією та помпою – ефективне рішення для очищення води у вас вдома.",
@@ -230,12 +204,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-1.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 1" },
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-2.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 2" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-3.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 3" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-4.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 4" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-5.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 5" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-6.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 6" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-7.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 7" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-ecosoft-standard-6-50m-z-mineralizatorom-8.jpg", alt: "Фільтр зворотного осмосу Ecosoft Standard 6-50М з мінералізатором - фото 8" },
     ],
     about: [
       "Система зворотного осмосу Ecosoft Standard 6-50М – ефективне рішення для очищення води у вас вдома.",
@@ -261,8 +229,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-5-stupinchasta-pallas-enjoy-smart-bez-pompi4-1.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 5-75 - фото 1" },
       { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-5-stupinchasta-pallas-enjoy-smart-bez-pompi4-2.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 5-75 - фото 2" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-5-stupinchasta-pallas-enjoy-smart-bez-pompi4-3.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 5-75 - фото 3" },
-      { src: "/product-images/reverse-osmosis/sistema-zvorotnogo-osmosu-5-stupinchasta-pallas-enjoy-smart-bez-pompi4-4.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 5-75 - фото 4" },
     ],
     about: [
       "Фільтр зворотного осмосу Ecosoft Absolute 5-75М (MO575MECO) призначений для очищення води на молекулярному рівні, що робить воду ідеально чистою безпечною.",
@@ -288,10 +254,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-absolut-6-75m-z-mineralizarorom-1.jpg", alt: "Фільтр зворотного осмосу Absolut 6-75M з мінералізарором - фото 1" },
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-absolut-6-75m-z-mineralizarorom-2.jpg", alt: "Фільтр зворотного осмосу Absolut 6-75M з мінералізарором - фото 2" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-absolut-6-75m-z-mineralizarorom-3.jpg", alt: "Фільтр зворотного осмосу Absolut 6-75M з мінералізарором - фото 3" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-absolut-6-75m-z-mineralizarorom-4.jpg", alt: "Фільтр зворотного осмосу Absolut 6-75M з мінералізарором - фото 4" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-absolut-6-75m-z-mineralizarorom-5.jpg", alt: "Фільтр зворотного осмосу Absolut 6-75M з мінералізарором - фото 5" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-absolut-6-75m-z-mineralizarorom-6.jpg", alt: "Фільтр зворотного осмосу Absolut 6-75M з мінералізарором - фото 6" },
     ],
     about: [
       "Фільтр зворотного осмосу Ecosoft Absolute 6-75М (MO675MECO) з мінералізатором призначений для очищення води на молекулярному рівні та її збагачення необхідними мінералами та макроелементами.",
@@ -317,10 +279,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-absolute-6-75mps-z-mineralizatorom-ta-pompoyu-na-stanini-1.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 6-75MPS з мінералізатором та помпою - фото 1" },
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-absolute-6-75mps-z-mineralizatorom-ta-pompoyu-na-stanini-2.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 6-75MPS з мінералізатором та помпою - фото 2" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-absolute-6-75mps-z-mineralizatorom-ta-pompoyu-na-stanini-3.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 6-75MPS з мінералізатором та помпою - фото 3" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-absolute-6-75mps-z-mineralizatorom-ta-pompoyu-na-stanini-4.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 6-75MPS з мінералізатором та помпою - фото 4" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-absolute-6-75mps-z-mineralizatorom-ta-pompoyu-na-stanini-5.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 6-75MPS з мінералізатором та помпою - фото 5" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-absolute-6-75mps-z-mineralizatorom-ta-pompoyu-na-stanini-6.jpg", alt: "Фільтр зворотного осмосу Ecosoft Absolute 6-75MPS з мінералізатором та помпою - фото 6" },
     ],
     about: [
       "Фільтр зворотного осмосу Ecosoft Absolute 6-75MPS.",
@@ -346,10 +304,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-mini-1.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust MINI - фото 1" },
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-mini-2.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust MINI - фото 2" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-mini-3.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust MINI - фото 3" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-mini-4.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust MINI - фото 4" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-mini-5.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust MINI - фото 5" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-mini-6.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust MINI - фото 6" },
     ],
     about: [
       "Фільтр зворотного осмосу Ecosoft RObust MINI - ідеальне рішення для бізнесу.",
@@ -375,12 +329,6 @@ export const reverseOsmosisProducts: CatalogProduct[] = [
     images: [
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-1.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 1" },
       { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-2.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 2" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-3.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 3" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-4.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 4" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-5.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 5" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-6.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 6" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-7.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 7" },
-      { src: "/product-images/reverse-osmosis/filtr-zvorotnogo-osmosu-ecosoft-robust-8.jpg", alt: "Фільтр зворотного осмосу Ecosoft RObust COFFEE - фото 8" },
     ],
     about: [
       "Фільтр зворотного осмосу Ecosoft RObust COFFEE розроблений для професійних кав'ярень але підійде для поціновувачів смачної кави, чаю та перших страв у власному будинку.",
