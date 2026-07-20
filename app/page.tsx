@@ -21,8 +21,6 @@ const products: Product[] = [
     requestType: "installation",
     options: [
       { label: "Стандартний монтаж осмосу під мийкою" },
-      { label: "Виведення окремого крана для фільтрованої води" },
-      { label: "Підключення до основного змішувача 3-в-1" },
       { label: "Встановлення змішувачів для осмосу 3 в 1" },
     ],
   },
@@ -196,16 +194,6 @@ export default function Home() {
       </header>
 
       <section className="hero">
-        <svg
-          aria-hidden="true"
-          className="heroWaves"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 240"
-        >
-          <path d="M-120 128C80 48 210 204 410 128C610 52 760 52 960 128C1160 204 1300 72 1560 120" />
-          <path d="M-120 166C90 86 240 232 440 166C640 100 800 96 1000 166C1200 236 1330 112 1560 158" />
-          <path d="M-120 204C100 130 270 250 470 204C670 158 840 140 1040 204C1240 268 1360 168 1560 196" />
-        </svg>
         <div className="heroGrid">
           <div className="heroCopy">
             <p className="eyebrow">Фільтри для води з монтажем</p>

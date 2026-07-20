@@ -31,6 +31,25 @@ function cleanOptions(value: unknown) {
     : [];
 }
 
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function formatKyivDate() {
+  return new Intl.DateTimeFormat("uk-UA", {
+    day: "2-digit",
+    hour: "2-digit",
+    hour12: false,
+    minute: "2-digit",
+    month: "2-digit",
+    timeZone: "Europe/Kyiv",
+    year: "numeric",
+  }).format(new Date());
+}
+
 function buildMessage(payload: Required<OrderPayload>) {
   const requestType =
     requestTypeLabels[payload.requestType] || payload.requestType;
@@ -48,6 +67,42 @@ function buildMessage(payload: Required<OrderPayload>) {
     "Обрані варіанти:",
     selectedOptions,
     `Коментар: ${payload.comment || "без коментаря"}`,
+  ].join("\n");
+}
+
+function buildTelegramMessage(payload: Required<OrderPayload>) {
+  const requestType =
+    requestTypeLabels[payload.requestType] || payload.requestType;
+  const selectedOptions = payload.selectedOptions.length
+    ? payload.selectedOptions
+        .map((option) => `  • ${escapeHtml(option)}`)
+        .join("\n")
+    : "  • не вибрано";
+  const item = payload.item || "не вказано";
+  const comment = payload.comment || "Без коментаря";
+
+  return [
+    "💧 <b>RO filter</b>  |  <b>НОВА ЗАЯВКА</b>",
+    "",
+    "👤 <b>Ім'я:</b>",
+    escapeHtml(payload.name),
+    "",
+    "📞 <b>Телефон:</b>",
+    escapeHtml(payload.phone),
+    "",
+    "🛒 <b>Запит:</b>",
+    escapeHtml(requestType),
+    "",
+    "📦 <b>Позиція:</b>",
+    escapeHtml(item),
+    "",
+    "✅ <b>Обрані варіанти:</b>",
+    selectedOptions,
+    "",
+    "💬 <b>Коментар:</b>",
+    escapeHtml(comment),
+    "",
+    `🕘 <i>${formatKyivDate()}</i>`,
   ].join("\n");
 }
 
@@ -105,6 +160,7 @@ async function sendTelegram(message: string) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: chatId,
+        parse_mode: "HTML",
         text: message,
       }),
     }
@@ -136,6 +192,7 @@ export async function POST(request: Request) {
   }
 
   const message = buildMessage(payload);
+  const telegramMessage = buildTelegramMessage(payload);
 
   try {
     const channels: Promise<void>[] = [];
@@ -145,7 +202,7 @@ export async function POST(request: Request) {
     }
 
     if (hasTelegramSettings()) {
-      channels.push(sendTelegram(message));
+      channels.push(sendTelegram(telegramMessage));
     }
 
     if (!channels.length) {
