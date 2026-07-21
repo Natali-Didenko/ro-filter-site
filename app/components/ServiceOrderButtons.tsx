@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 export type ServiceOrder = {
   name: string;
@@ -17,6 +18,11 @@ export default function ServiceOrderButtons({
   const [activeService, setActiveService] = useState<ServiceOrder | null>(null);
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [message, setMessage] = useState("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   function openModal(service: ServiceOrder) {
     setActiveService(service);
@@ -83,7 +89,8 @@ export default function ServiceOrderButtons({
         ))}
       </div>
 
-      {activeService ? (
+      {mounted && activeService
+        ? createPortal(
         <div
           aria-modal="true"
           className="modalOverlay"
@@ -133,8 +140,10 @@ export default function ServiceOrderButtons({
               ) : null}
             </form>
           </div>
-        </div>
-      ) : null}
+        </div>,
+            document.body
+          )
+        : null}
     </>
   );
 }

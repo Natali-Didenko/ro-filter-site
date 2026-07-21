@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 export type ProductOption = {
   label: string;
@@ -27,6 +28,11 @@ export default function ProductOrderCards({ products }: { products: Product[] })
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [message, setMessage] = useState("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   function openModal(product: Product) {
     setActiveProduct(product);
@@ -115,7 +121,8 @@ export default function ProductOrderCards({ products }: { products: Product[] })
         ))}
       </div>
 
-      {activeProduct ? (
+      {mounted && activeProduct
+        ? createPortal(
         <div
           aria-modal="true"
           className="modalOverlay"
@@ -179,8 +186,10 @@ export default function ProductOrderCards({ products }: { products: Product[] })
               ) : null}
             </form>
           </div>
-        </div>
-      ) : null}
+        </div>,
+            document.body
+          )
+        : null}
     </>
   );
 }
